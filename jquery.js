@@ -15,7 +15,6 @@ $(document).ready(function () {
 
 
 
-
     $(window).resize(function () {
         ResCarouselSize();
     });
