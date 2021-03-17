@@ -1,0 +1,46 @@
+footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #efefef;
+}
+html
+{
+    height: 100%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .icon
+  {
+    width: 50px;
+    padding-top:15px;
+  }
+  .container-icon
+  {
+      border: 3px solid black;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+  }
+  .container-icon:hover
+  {
+      background-color: yellow;
+      transform:scale(1.9);
+      transition: 10s;
+  }
