@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .basket{
     font-weight: 600;
     color: #3a2c21;
@@ -42,3 +43,65 @@
     .MultiCarousel .rightLst { right:0; }
     
     .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none;}
+=======
+html
+{
+    height: 100%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 3rem;
+    min-height: 100%;
+    font-family: "Helvetica Ne  ue", Arial, sans-serif;
+  }
+  footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    background-color: #3a2c21;
+    color: white;
+    font-size: 1em;
+}
+
+footer ul
+{
+  list-style-type: none;
+}
+a
+{
+  text-decoration: none;
+  color: white;
+}
+a:hover
+{
+  color:turquoise;
+}
+
+.logo
+{
+  font-family: 'Bad Script', cursive;
+  font-size: 1.7em;
+  margin: auto;
+}
+.social
+{ 
+  text-align: center;
+  margin: auto;
+  padding-right: 20px;
+}
+.social li
+{
+  display:inline;
+  font-size: 1.6em;
+}
+>>>>>>> peter
