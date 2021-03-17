@@ -136,10 +136,10 @@
                 <div class="card h-100">
                   <img src="images/pomme-amande-cannelle-300x300.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Thé Noir Pomme Amande Cannelle</h5>
+                    <h5 class="card-title" id="item1" >Thé Noir Pomme Amande Cannelle</h5>
                     <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
                     </div>
-                    <div class="card-footer"><span>5,30 € – 8,40 € TTC</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                    <div class="card-footer"><span>5,30 € – 8,40 € TTC</span><button id="ajouter" value="item1" type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
               </div>
             </div>
@@ -211,7 +211,7 @@
                     <h5 class="card-title">Thé Noir Saveur Fraise Citron</h5>
                     <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
                     </div>
-                    <div class="card-footer"><span>9,5 €</span><button type="button" id="ajouter" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                    <div class="card-footer"><span>9,5 €</span><button type="button" id="ajouter" value="item" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
               </div>
             </div>
@@ -231,7 +231,7 @@
       </div>
       <div class="modal-body">
         <p type="text" id="desc"></p>
-        <input type="text" id="nbre">
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -245,10 +245,11 @@
  $(function () {
             
             $("#ajouter").click(function () {
+              console.log($("#ajouter").val())
+              var m=$("#ajouter").val()
             
-            
-             $('#desc').text($(".card-title").text()); // remplace le contenu actuel du paragraphe par "Nouveau contenu !"
-
+            console.log($(".card-title").text())
+             $('#desc').text($("#"+m).text()); 
 
             })
            
