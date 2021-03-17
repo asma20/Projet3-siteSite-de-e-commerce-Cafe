@@ -1,4 +1,35 @@
 .basket{
     font-weight: 600;
-    color: #624a36;
+    color: #3a2c21;
+}
+.btn{
+    border: 1px solid #3a2c21 ;
+    color: #3a2c21;
+    margin-left: 10px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0);
+}
+.btn:hover{
+    border: 1px solid #3a2c21;
+    background-color: #50372b;
+    color: #ffffff;
+}.btn:active{
+    border: 1px solid #816652;
+    background-color: #817252;
+    color: #ffffff;
+    text-shadow: 0px 0px 3px rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.459);
+}
+.navbar{
+    background-color: #3a2c21;
+    color: #b9b9b9;
+    text-shadow: 0px 0px 3px black;
+}
+.navbar-brand{
+    font-family: 'Bad Script', cursive;
+}
+.container{
+    margin-top: 30px;
+}
+.card-footer{
+    text-align: right;
 }
