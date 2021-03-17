@@ -11,8 +11,10 @@
   <link href="style.css" rel="stylesheet" />
   <script src="jquery.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-    <title>TENANGO, pur café</title>
-</head>
+  
+  <title>TENANGO, pur café</title>
+    </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark " aria-label="Eleventh navbar example">
@@ -99,10 +101,136 @@
       </div>
     </div>
   </section>
+
+  <section id="the">
+    <div class="container">
+
+      <div class="row">
+        <div class="MultiCarousel" data-items="1,2,4,4" data-slide="1" id="MultiCarousel" data-interval="1000">
+          <div class="MultiCarousel-inner">
+            <div class="item col">
+              <div class="card pad15">
+                <img src="images/pomme-amande-cannelle-300x300.jpg" class="card-img-top" alt="...">
+                <div class="card-body ">
+                  <h5 class="card-title">Thé Noir Pomme Amande Cannelle</h5>
+
+                  <p class="text-center">5,30 € – 8,40 € TTC</p>
+                  <a href="#" class=" btn btn-primary "><i class="fas fa-shopping-cart">Ajouter au panier</i></a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card pad15">
+                <img src="images/english-breakfast-1-300x300.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Thé Noir English Breakfast Broken</h5>
+                  <p class="card-text">
+                  <p class="text-center">4,90 € – 6,70 € TTC</p>
+                  <a href="#" class=" btn btn-primary "><i class="fas fa-shopping-cart">Ajouter au panier</i></a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card pad15">
+                <img src="images/the-noir-pain-epices-1-300x300.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Thé De Noël Noir Saveur Pain D’épices</h5>
+                  <p class="card-text">
+                  <p class="text-center">5,30 € – 8,80 € TTC</p>
+                  <a href="#" class=" btn btn-primary "><i class="fas fa-shopping-cart">Ajouter au panier</i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="card pad15">
+                <img src="images/le-secret-des-mayas-600x600.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Thé Noir Saveur Cacao Chocolat</h5>
+                  <p class="card-text">
+                  <p class="text-center">5,10 € – 8,40 € TTC</p>
+                  <a href="#" class=" btn btn-primary "><i class="fas fa-shopping-cart">Ajouter au panier</i></a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card pad15">
+                <img src="images/melange-du-costa-rica-600x600.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Thé Noir Saveur Mandarine</h5>
+                  <p class="card-text">
+                  <p class="text-center">5,30 € – 8,40 € TTC"</p>
+                  <a href="#" class=" btn btn-primary "><i class="fas fa-shopping-cart">Ajouter au panier</i></a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="card pad15">
+                <img src="images/the-noir-bio-cour-de-recre-600x600.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Thé Noir Saveur Fraise Citron</h5>
+                  <p class="card-text">
+                  <p class="text-center">5,70 € – 9,20 € TTC</p>
+                  <a href="#" id="ajouter" class=" btn btn-primary "  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <i class="fas fa-shopping-cart" >Ajouter au panier</i></a>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+          <button class="btn btn-primary leftLst">
+            < </button>
+              <button class="btn btn-primary rightLst">></button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p type="text" id="desc"></p>
+        <input type="text" id="nbre" placeholder="+/-">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+
+  <script>
+ 
+
+
+  $(function () {
+            let i = 0;
+            $("#ajouter").click(function () {
+             //   $("#desc").val(++i);
+             $("#nbre").val($(".card-title").text())
+            })
+           
+        })
+
+  </script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d09c70e5a9.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
