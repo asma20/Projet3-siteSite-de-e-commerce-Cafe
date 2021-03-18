@@ -2,7 +2,18 @@
     font-weight: 600;
     color: #3a2c21;
 }
+.total{
+    text-align: right;
+    padding: 0px 20px;
+}
 .btn{
+    border: 1px solid #3a2c21 ;
+    color: #3a2c21;
+    margin-left: 10px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0);
+}
+.btnvalider{
+    background-color: #dfd7d2;
     border: 1px solid #3a2c21 ;
     color: #3a2c21;
     margin-left: 10px;
@@ -12,6 +23,7 @@
     border: 1px solid #3a2c21;
     background-color: #50372b;
     color: #ffffff;
+
 }.btn:active{
     border: 1px solid #816652;
     background-color: #817252;
@@ -34,11 +46,90 @@
     text-align: right;
 }
 .MultiCarousel { float: left; overflow: hidden; padding: 15px; width: 100%; position:relative; }
+#the {margin-bottom:100px}
     .MultiCarousel .MultiCarousel-inner { transition: 1s ease all; float: left; }
         .MultiCarousel .MultiCarousel-inner .item { float: left;}
-        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:white; }
+        .MultiCarousel .MultiCarousel-inner .item > div { text-align: center; padding:10px; margin:10px; background:rgb(255, 255, 255); }
     .MultiCarousel .leftLst, .MultiCarousel .rightLst { position:absolute;top:calc(50% - 20px); }
-    .MultiCarousel .leftLst { left:0; }
+    .MultiCarousel .leftLst { left:-20px; }
     .MultiCarousel .rightLst { right:0; }
     
     .MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { pointer-events: none;}
+
+html
+{
+    height: 100%;
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 3rem;
+    min-height: 100%;
+    font-family: "Helvetica Ne  ue", Arial, sans-serif;
+  }
+  footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    background-color: #3a2c21;
+    color: white;
+    font-size: 1em;
+    margin-top: 100px;
+}
+
+footer ul
+{
+  list-style-type: none;
+}
+a
+{
+  text-decoration: none;
+  color: white;
+}
+a:hover
+{
+  color:turquoise;
+}
+
+.logo
+{
+  font-family: 'Bad Script', cursive;
+  font-size: 1.7em;
+  margin: auto;
+}
+.social
+{ 
+  text-align: center;
+  margin: auto;
+  padding-right: 20px;
+}
+.social li
+{
+  display:inline;
+  font-size: 1.6em;
+}
+h2
+{
+  color: #3a2c21;
+  font-family: 'Bad Script', cursive;
+  font-weight: bolder;
+}
+
+#coffeeHide, #tisaneHide, #teaHide
+{
+  margin-bottom: 100px;
+}
+.coffee-title, .tea-title, .tisane-title
+{
+  margin-bottom:5vh;
+}
+body {padding-top:50px;}

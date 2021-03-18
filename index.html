@@ -6,21 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet"> 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+    integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   <link href="style.css" rel="stylesheet" />
-  <script src="jquery.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+    integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
   <title>TENANGO, pur café</title>
-    </head>
+</head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark " aria-label="Eleventh navbar example">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Eleventh navbar example">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">TENANGO</a>
+        <a class="navbar-brand" id="tenango" href="#">TENANGO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09"
           aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -28,190 +30,127 @@
         <div class="collapse navbar-collapse" id="navbarsExample09">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#cafe">Cafés</a>
+              <a class="nav-link" id="coffeesection" aria-current="page" href="#">Cafés</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#the">Thés</a>
+              <a class="nav-link" id="teasection" href="#">Thés</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Tisanes</a>
+              <a class="nav-link" id="teazanesection" href="#">Tisanes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link basket" href="#"><i class="fas fa-shopping-bag"></i> Panier</a>
+              <a class="nav-link basket" href="#" data-bs-toggle="modal" data-bs-target="#panierModal"><i
+                  class="fas fa-shopping-bag"></i> Panier</a>
             </li>
           </ul>
           <form>
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control" id="myInput" type="text" placeholder="Search" aria-label="Search">
           </form>
         </div>
       </div>
     </nav>
   </header>
+  <div class="modal fade" id="panierModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Votre Panier</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table id="list"></table>
+        </div>
+        <div class="total">TOTAL = <span id="basketTotalTarget"></span></div>
+        <div class="modal-footer">
+          <button type="button" class="btn shadow-none" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn shadow-none" value="Clear" onclick="ClearAll()">Vider le
+            panier</button>
+          <button type="button" class="btn shadow-none btnvalider" onclick="validate()">Valider le panier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   <section id="cafe">
     <div class="container">
       <div class="row">
-      <div class="MultiCarousel" data-items="1,2,4,4" data-slide="1" id="MultiCarousel" data-interval="1000">
-        <div class="MultiCarousel-inner">
-    
-        <div class="item">
-        <div class="col">
-          <div class="card h-100">
-            <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Café 100% pur grain</h5>
-              <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café 100%
-                café</p>
-              </div>
-              <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-          </div>
-        </div>
-        </div>
-        <div class="item">
-        <div class="col">
-          <div class="card h-100">
-            <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Café 100% pur grain</h5>
-              <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café 100%
-                café</p>
-              </div>
-              <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-          </div>
-        </div>
-        </div>
-        <div class="item">
-        <div class="col">
-          <div class="card h-100">
-            <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Café 100% pur grain</h5>
-              <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café 100%
-                café</p>
-              </div>
-              <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-          </div>
-        </div>
-        </div>
-        <div class="item">
-        <div class="col">
-          <div class="card h-100">
-            <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Café 100% pur grain</h5>
-              <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café 100%
-                café</p>
-              </div>
-              <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-          </div>
-        </div>
-        </div>
-        <div class="item">
-          <div class="col">
-            <div class="card h-100">
-              <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Café 100% pur grain</h5>
-                <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café 100%
-                  café</p>
-                </div>
-                <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-            </div>
-          </div>
-          </div>
-</div>
-<button class="btn  leftLst fas fa-angle-left"></button>
-<button class="btn rightLst fas fa-angle-right"></button>
-</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="the">
-    <div class="container">
-      <div class="row">
+        <h2>Notre sélection de cafés</h2>
         <div class="MultiCarousel" data-items="1,2,4,4" data-slide="1" id="MultiCarousel" data-interval="1000">
           <div class="MultiCarousel-inner">
-            <div class="item col">
+            <div class="item">
               <div class="col">
                 <div class="card h-100">
-                  <img src="images/pomme-amande-cannelle-300x300.jpg" class="card-img-top" alt="...">
+                  <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Thé Noir Pomme Amande Cannelle</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                    </div>
-                    <div class="card-footer"><span>5,30 € – 8,40 € TTC</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                    <h5 class="card-title">GUATEMALA HUEHUETENANGO</h5>
+                    <p class="card-text">Un Arabica fruité et acidulé au goût épicé. Il se caractérise par un bon corps,
+                      parfumé, aromatique et une bonne acidité.</p>
+                  </div>
+                  <div class="card-footer"><span>25,50 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+                      data-name="GUATEMALA HUEHUETENANGO" data-price="25.50"><i class="fas fa-shopping-bag"></i><span
+                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="col">
                 <div class="card h-100">
-                  <img src="images/english-breakfast-1-300x300.jpg" class="card-img-top" alt="...">
+                  <img src="./images/cafe2.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Thé Noir English Breakfast Broken</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                    </div>
-                    <div class="card-footer"><span>4,90 € – 6,70 € TTC</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                    <h5 class="card-title">Moka lavé de Yrgacheffe</h5>
+                    <p class="card-text">Pure origine Moka en provenance d’Ethiopie de la région de Sidamo dans le sud
+                      du pays, ce café est cultivé en altitude à environ 2000m sous l'ombrage des forêts.</p>
+                  </div>
+                  <div class="card-footer"><span>19,20 €</span><button type="button" onclick="addItem(this)"
+                      data-name="Moka lavé de Yrgacheffe" data-price="19.20" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
+                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="col">
                 <div class="card h-100">
-                  <img src="images/the-noir-pain-epices-1-300x300.jpg" class="card-img-top" alt="...">
+                  <img src="./images/cafe11.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Thé De Noël Noir Saveur Pain D’épices</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                    </div>
-                    <div class="card-footer"><span>5,30 € – 8,80 € TTC</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                    <h5 class="card-title">Brésil sul de minas</h5>
+                    <p class="card-text">Ce café brésilien Sul de Minas au parfum envoûtant, offre une réelle onctuosité
+                      alliée à une faible acidité. Il est très apprécié des amateurs aimant un café doux</p>
+                  </div>
+                  <div class="card-footer"><span>16,45 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+                      data-name="Brésil sul de minas" data-price="16.45"><i class="fas fa-shopping-bag"></i><span
+                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="col">
                 <div class="card h-100">
-                  <img src="images/le-secret-des-mayas-600x600.jpg" class="card-img-top" alt="...">
+                  <img src="./images/cafe10.jpeg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Thé Noir Saveur Cacao Chocolat</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                    </div>
-                    <div class="card-footer"><span>5,10 € – 8,40 € TTC</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                    <h5 class="card-title">Colombie Finca Gutierrez Wush Wush</h5>
+                    <p class="card-text">Ce précieux micro-lot est un wush wush lavé qui offre des notes d'écorce de
+                      citron, physalis, sucre de canne et rhubarbe.</p>
+                  </div>
+                  <div class="card-footer"><span>23,50 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+                      data-name="Colombie Finca Gutierrez Wush Wush" data-price="23.50"><i
+                        class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+                        panier</span></button></div>
                 </div>
               </div>
             </div>
             <div class="item">
               <div class="col">
                 <div class="card h-100">
-                  <img src="images/melange-du-costa-rica-600x600.jpg" class="card-img-top" alt="...">
+                  <img src="./images/cafe8.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Thé Noir Saveur Mandarine</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                    </div>
-                    <div class="card-footer"><span>5,30 € – 8,40 € TTC</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="col">
-                <div class="card h-100">
-                  <img src="images/the-noir-bio-cour-de-recre-600x600.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Thé Noir Saveur Fraise Citron</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                    </div>
-                    <div class="card-footer"><span>5,70 € – 9,20 € TTC</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="col">
-                <div class="card h-100">
-                  <img src="images/the-noir-bio-cour-de-recre-600x600.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Thé Noir Saveur Fraise Citron</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                    </div>
-                    <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                    <h5 class="card-title">YETI VILLAGE MOKA BIO Ethiopie</h5>
+                    <p class="card-text">Notre best-seller en version décaféinée pour que les amateurs de décaféiné
+                      aient aussi accès aux cafés de spécialités.</p>
+                  </div>
+                  <div class="card-footer"><span>18 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+                      data-name="YETI VILLAGE MOKA BIO Ethiopie" data-price="18"><i
+                        class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+                        panier</span></button></div>
                 </div>
               </div>
             </div>
@@ -221,49 +160,689 @@
         </div>
       </div>
     </div>
-    <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p type="text" id="desc"></p>
-        <input type="text" id="nbre" placeholder="+/-">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+  </section>
+
+  <section id="the">
+    <div class="container">
+      <div class="row">
+        <h2>Notre sélection de thé</h2>
+        <div class="MultiCarousel" data-items="1,2,4,4" data-slide="1" id="MultiCarousel" data-interval="1000">
+          <div class="MultiCarousel-inner">
+            <div class="item">
+              <div class="col-10">
+                <div class="card h-100">
+                  <img src="./the/the concu.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Thé merveilleux</h5>
+                    <p class="card-text">Création originale et savoureuse associant </p>
+                  </div>
+                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-name="Thé merveilleux" data-price=9.5
+                      onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline">
+                        Ajouter au panier</span></button></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="col-10">
+                <div class="card h-100">
+                  <img src="./the/theAMANTS.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Thé amants</h5>
+                    <p class="card-text">Un thé né de la rencontre entre des parfums fruités </p>
+                  </div>
+                  <div class="card-footer"><span>8,5 €</span><button type="button" class="btn shadow-none" data-name="Thé amants" data-price=8.5
+                      onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline">
+                        Ajouter au panier</span></button></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="col-10">
+                <div class="card h-100">
+                  <img src="./the/THEMIDORI.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Thé Genmaicha midori</h5>
+                    <p class="card-text">Thé vert du Japon, Thé vert Bio et riz grillé de Shizuoka.</p>
+                  </div>
+                  <div class="card-footer"><span>13 €</span><button type="button" class="btn shadow-none" data-name="Thé Genmaicha midori"
+                      data-price=13 onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span
+                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="col-10">
+                <div class="card h-100">
+                  <img src="./the/thepomme.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Thé des trésors</h5>
+                    <p class="card-text">
+                      Thé vert, fruits caramélisés et éclats d’amande
+                    </p>
+                  </div>
+                  <div class="card-footer"><span>10 €</span><button type="button" class="btn shadow-none" data-name="Thé des trésors" data-price="10"
+                      onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline">
+                        Ajouter au panier</span></button></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="col-10">
+                <div class="card h-100">
+                  <img src="./the/thetresor.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">trésors et ammande</h5>
+                    <p class="card-text">Thé vert, fruits caramélisés et éclats d’amande
+                    </p>
+                  </div>
+                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-name="Thé des trésors et ammande"
+                      data-price="9.5" onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span
+                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="col-10">
+                <div class="card h-100">
+                  <img src="./the/theGuim.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Thé guimet</h5>
+                    <p class="card-text">Création exclusive aux parfums frais et fleuris.</p>
+                  </div>
+                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-name="Thé guimet" data-price="9.5"
+                      onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline">
+                        Ajouter au panier</span></button></div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="col-10">
+                <div class="card h-100">
+                  <img src="./the/theSourcies.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Thé des sources</h5>
+                    <p class="card-text">Une pointe de bergamote, quelques pétales de rose.</p>
+                  </div>
+                  <div class="card-footer"><span>8,30 €</span><button type="button" class="btn shadow-none" data-name="Thé des sources"
+                      data-price="8.30" onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span
+                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn  leftLst fas fa-angle-left"></button>
+          <button class="btn rightLst fas fa-angle-right"></button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
   </section>
+
+  <section id="coffeeHide">
+    <div class="container row mx-auto">
+      <h2 class="coffee-title">Nos cafés</h2>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">GUATEMALA HUEHUETENANGO</h5>
+            <p class="card-text">Un Arabica fruité et acidulé au goût épicé. Il se caractérise par un bon corps,
+              parfumé, aromatique et une bonne acidité. Le climat, l’eau, la fertilité du sol et les variétés
+              cultivées font que ce café est très demandé pour son arôme, son parfum, son corps et son goût</p>
+          </div>
+          <div class="card-footer"><span>25,50 €</span><button type="button" class="btn shadow-none" id=""onclick="addItem(this)"
+              data-name="GUATEMALA HUEHUETENANGO" data-price="25.50"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Moka lavé de Yrgacheffe</h5>
+            <p class="card-text">Pure origine Moka en provenance d’Ethiopie de la région de Sidamo dans le sud du
+              pays, ce café est cultivé en altitude à environ 2000m sous l'ombrage des forêts.</p>
+          </div>
+          <div class="card-footer"><span>19,20 €</span><button type="button" onclick="addItem(this)"
+              data-name="Moka lavé de Yrgacheffe" data-price="19.20" class="btn shadow-none" data-bs-toggle="modal"
+              data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline">
+                Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe3.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Papouasie Nouvelle Guinée Plantation Sigri</h5>
+            <p class="card-text">Pure origine provenant de la plantation Sigri située dans la Vallée Wahgi,
+              Hautes-Terres Occidentales de Papouasie-Nouvelle Guinée. Cultivé à une altitude de 1500m, Ce café
+              est issu d’une plantation emblématique de la biodiversité.</p>
+          </div>
+          <div class="card-footer"><span>12,30 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+              data-name="Papouasie Nouvelle Guinée Plantation Sigri" data-price="12.30"><i
+                class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+                panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tonino Lamborghini</h5>
+            <p class="card-text">Le café en grains Black de Tonino Lamborghini vous transportera à travers
+              l'Italie et son savoir-faire. Découvrez un café unique riche en arômes de cacao, pain grillé et
+              épices, idéal pour un espresso ou un ristretto .</p>
+          </div>
+          <div class="card-footer"><span>15,39 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+              data-name="Tonino Lamborghini" data-price="15.39"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+    </div>
+    <div class="container row mx-auto">
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café Malabar Moussoné AA</h5>
+            <p class="card-text">Pure origine Arabica provenant de la région de Malabar située sur la côte du
+              sud-ouest de la péninsule indienne, sur la partie nord de l’état de Kérala, l’un des rares états
+              indiens au climat tropical humide.</p>
+          </div>
+          <div class="card-footer"><span>14,50 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+              data-name="Café Malabar Moussoné AA" data-price="14.50"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Nicaragua Buenos Aires Estate Arabica</h5>
+            <p class="card-text">Pure origine provenant de la région de Nueva Segovia au Nicaragua , cultivée à
+              une altitude de 1200m à 1500m) par l’entreprise familiale de Cafetalera Buenos Aires, dans les
+              montagnes Dipilto.</p>
+          </div>
+          <div class="card-footer"><span>19,99 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+              data-name="Nicaragua Buenos Aires Estate Arabica" data-price="19.99"><i
+                class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+                panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe7.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Guatemala Finca Pampojila</h5>
+            <p class="card-text">Pure origine provenant de la région d'Atitlàn Solola au Guatemala, ce café est
+              cultivé en altitude entre 1470m et 1720m et est traité par voie lavée.</p>
+          </div>
+          <div class="card-footer"><span>17,65 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+              data-name="Guatemala Finca Pampojila" data-price="17.65"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe8.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">YETI VILLAGE MOKA BIO Ethiopie</h5>
+            <p class="card-text">Notre best-seller en version décaféinée pour que les amateurs de décaféiné aient
+              aussi accès aux cafés de spécialités. La décaféination par CO2 est respecteueuse du goût et de
+              l’environnement. </p>
+          </div>
+          <div class="card-footer"><span>18 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal"
+              data-bs-target="#exampleModal" onclick="addItem(this)" data-name="YETI VILLAGE MOKA BIO Ethiopie"
+              data-price="18.00"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+                panier</span></button></div>
+        </div>
+      </div>
+    </div>
+    <div class="container row mx-auto">
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe9.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Ethiopie Moka Shantawene</h5>
+            <p class="card-text">Ce café en grains Moka Shantawene est un café d'exception d'Éthiopie situé dans
+              la zone de Sidama au Sud du pays. Ce 100% Arabica développe des notes exceptionnelles de pêche
+              blanche, jasmin, bergamote, ananas. </p>
+          </div>
+          <div class="card-footer"><span>20 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal"
+              data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Ethiopie Moka Shantawene"
+              data-price="20"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+                panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe10.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Colombie Finca Gutierrez Wush Wush</h5>
+            <p class="card-text">Ce café en grains vient de la Ferme Gutierrez dans la région de Tolima à l'Ouest
+              de la Colombie. Ce précieux micro-lot est un wush wush lavé qui offre des notes d'écorce de citron,
+              physalis, sucre de canne et rhubarbe.</p>
+          </div>
+          <div class="card-footer"><span>23,50 €</span><button type="button" class="btn shadow-n onclick="addItem(this)"
+              data-name="Colombie Finca Gutierrez Wush Wush" data-price="23.50"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au
+                panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe11.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Brésil sul de minas</h5>
+            <p class="card-text">Ce café brésilien Sul de Minas au parfum envoûtant, offre une réelle onctuosité
+              alliée à une faible acidité. Il est très apprécié des amateurs aimant un café doux</p>
+          </div>
+          <div class="card-footer"><span>16,45 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+              data-name="Brésil sul de minas" data-price="16.45"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe12.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">HIMALAYA BOURBON PACAS SALVADOR</h5>
+            <p class="card-text">L'Himalaya Bourbon Pacas du Salvador a un profil très "Mild" Amérique centrale,
+              avec un nez chaleureux, doux et fruité, un corps velouté, des notes de chocolat, de fruits jaunes,
+              une finale longue, gourmande et sucrée.</p>
+          </div>
+          <div class="card-footer"><span>13,65 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+              data-name="HIMALAYA BOURBON PACAS SALVADOR" data-price="13.65"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au
+                panier</span></button></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="teaHide">
+    <div class="container row mx-auto">
+      <h2 class="tea-title">Nos thés</h2>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/the concu.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Thé merveilleux</h5>
+            <p class="card-text">Création originale et savoureuse associant un thé vert aux notes gourmandes d'amandes
+              caramélisées et de pistache</p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)" data-name="Thé merveilleux"
+              data-price="9.5"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+                panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/theAMANTS.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Thé amants</h5>
+            <p class="card-text">Un thé né de la rencontre entre des parfums fruités et épicés, tels que la douceur de
+              la pomme et la sensualité du gingembre</p>
+          </div>
+          <div class="card-footer"><span>8,5 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)" data-name="Thé amants"
+              data-price="8.5"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+                panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/THEMIDORI.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Thé Genmaicha midori</h5>
+            <p class="card-text">Thé vert du Japon, Thé vert Bio et riz grillé de Shizuoka.</p>
+          </div>
+          <div class="card-footer"><span>13 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal"
+              data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé Genmaicha midori" data-price="13"><i
+                class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/thepomme.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Thé des trésors</h5>
+            <p class="card-text">
+              Thé vert, fruits caramélisés et éclats d’amande
+            </p>
+          </div>
+          <div class="card-footer"><span>10 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal"
+              data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé des trésors" data-price="10"><i
+                class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container row mx-auto">
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/thetresor.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Thé des trésors et ammande</h5>
+            <p class="card-text">Thé vert, fruits caramélisés et éclats d’amande
+            </p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+              data-name="Thé des trésors et ammande" data-price="9.5"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/theGuim.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Thé guimet</h5>
+            <p class="card-text">Création exclusive aux parfums frais et fleuris évoquant la fleur de cerisier associée
+              aux notes zestées d’agrumes.</p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)" data-name="Thé guimet"
+              data-price="9.5"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+                panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/theSourcies.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Thé des sources</h5>
+            <p class="card-text">Une pointe de bergamote, quelques pétales de rose et de bleuets font de ce thé un
+              véritable bouquet de saveurs, frais et désaltérant</p>
+          </div>
+          <div class="card-footer"><span>8,30 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)" data-name="Thé des sources"
+              data-price="8.30"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+                panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/thedetox.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> Thé brésilienne bio</h5>
+            <p class="card-text">Un délicieux mélange BIO de thé vert, maté, açai, guarana & fruit de la passion.</p>
+          </div>
+          <div class="card-footer"><span>9,50 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+              data-name="Thé brésilienne bio" data-price="9.50"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+    </div>
+    <div class="container row mx-auto">
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/theemiriale.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Thé imérial</h5>
+            <p class="card-text">Entre influences indiennes et raffinement français, ce chaï se distingue par son
+              mélange d’épices : cardamome, gingembre, baies roses</p>
+          </div>
+          <div class="card-footer"><span>8 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal"
+              data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé imérial" data-price="8"><i
+                class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/the7argume.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"> Thé russe gout 7 gout</h5>
+            <p class="card-text">Remarquable thé noir dont les parfums zestés évoquent 7 agrumes</p>
+          </div>
+          <div class="card-footer"><span>9 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal"
+              data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé russe gout 7 gout" data-price="9"><i
+                class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/thedesMOINES.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Thé des moines</h5>
+            <p class="card-text">Inspiré d’une recette ancestrale élaborée dans un monastère tibétain, voici un mélange
+              de thé noir et de thé vert à la saveur florale unique.</p>
+          </div>
+          <div class="card-footer"><span>9,20 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)" data-name="Thé des moines"
+              data-price="9.20"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+                panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./the/thepetttiga.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Thé noir du Sri Lanka</h5>
+            <p class="card-text">Corsé et riche en arômes, ce grand thé d'altitude aux feuilles très régulières est
+              certainement le plus bel " Orange Pekoe " que l'on puisse trouver</p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
+              data-name="Thé noir du Sri Lanka" data-price="9.50"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="tisaneHide">
+    <div class="container row mx-auto">
+      <h2 class="tisane-title">Nos tisanes</h2>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café 100% pur grain</h5>
+            <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
+              100%
+              café</p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café 100% pur grain</h5>
+            <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
+              100%
+              café</p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café 100% pur grain</h5>
+            <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
+              100%
+              café</p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café 100% pur grain</h5>
+            <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
+              100%
+              café</p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+    </div>
+    <div class="container row mx-auto">
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café 100% pur grain</h5>
+            <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
+              100%
+              café</p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café 100% pur grain</h5>
+            <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
+              100%
+              café</p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café 100% pur grain</h5>
+            <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
+              100%
+              café</p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100">
+          <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café 100% pur grain</h5>
+            <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
+              100%
+              café</p>
+          </div>
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
+                class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container-fluid mx-auto row">
+      <div class="col-3 d-md-block d-none mt-2">
+        <ul>
+          <a href="#">
+            <li>Contact</li>
+          </a>
+          <a href="#">
+            <li>Conditions générales de vente</li>
+          </a>
+          <a href="#">
+            <li>Mentions légales</li>
+          </a>
+        </ul>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="row">
+          <div class="col text-center">
+            <a href="index.html">
+              <p class="logo mt-2">TENANGO</p>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mt-2">
+            <ul class="social">
+              <li class="px-md-5 px-4"><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li class="px-md-5 px-4"><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li class="px-md-5 px-4"><a href="#"><i class="fab fa-facebook"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 offset-md-1 d-md-block d-none mt-2 text-start">
+        <ul>
+          <a href="#">
+            <li>Notre marque</li>
+          </a>
+          <a href="#">
+            <li>Nos cafés</li>
+          </a>
+          <a href="#">
+            <li>Nos thés</li>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="jquery.js"></script>
 
 
   <script>
- 
+    $(function () {
 
+      $("#coffeeHide, #teaHide, #tisaneHide").hide();
 
-  $(function () {
-            let i = 0;
-            $("#ajouter").click(function () {
-             //   $("#desc").val(++i);
-             $("#nbre").val($(".card-title").text())
-            })
-           
-        })
+      $("#ajouter").click(function () {
+        console.log($("#ajouter").val())
+        var m = $("#ajouter").val()
+        console.log($(".card-title").text())
+        $('#desc').text($("#" + m).text());
+      })
 
+      $("#coffeesection").click(function () {
+        $("#coffeeHide").show()
+        $("#cafe, #the").hide()
+        $("#teaHide, #tisaneHide").hide()
+      })
+
+      $("#teazanesection").click(function () {
+        $("#tisaneHide").show()
+        $("#cafe, #the").hide()
+        $("#coffeeHide, #teaHide").hide()
+      })
+
+      $("#teasection").click(function () {
+        $("#teaHide").show()
+        $("#cafe, #the").hide()
+        $("#coffeeHide,#tisaneHide").hide()
+      })
+
+      $("#tenango").click(function () {
+        $("#coffeeHide, #teaHide, #tisaneHide").hide()
+        $("#cafe, #the").show()
+      })
+
+      $("#myInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $(".card").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    })
   </script>
- 
+
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/d09c70e5a9.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/d09c70e5a9.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
