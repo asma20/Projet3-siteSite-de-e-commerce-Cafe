@@ -111,3 +111,12 @@ h2
   font-family: 'Bad Script', cursive;
   font-weight: bolder;
 }
+
+#coffeeHide, #tisaneHide, #teaHide
+{
+  margin-bottom: 100px;
+}
+.coffee-title, .tea-title, .tisane-title
+{
+  margin-bottom:5vh;
+}
