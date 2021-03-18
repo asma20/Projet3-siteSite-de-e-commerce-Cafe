@@ -39,7 +39,7 @@
               <a class="nav-link" href="#">Tisanes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link basket" href="#"><i class="fas fa-shopping-bag"></i> Panier</a>
+              <a class="nav-link basket" href="#" data-bs-toggle="modal" data-bs-target="#panierModal" ><i class="fas fa-shopping-bag"></i> Panier</a>
             </li>
           </ul>
           <form>
@@ -49,6 +49,27 @@
       </div>
     </nav>
   </header>
+
+ <div class="modal fade" id="panierModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Votre Panier</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table id="list"></table>
+      </div>
+      <div class="total">TOTAL = <span id="basketTotalTarget"></span></div>
+      <div class="modal-footer">
+        <button type="button" class="btn shadow-none" data-bs-dismiss="modal">Fermer</button>
+        <button type="button" class="btn shadow-none" value="Clear" onclick="ClearAll()">Vider le panier</button>
+        <button type="button" class="btn shadow-none btnvalider" onclick="validate()">Valider le panier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <section id="cafe">
     <div class="container">
       <div class="row">
@@ -61,14 +82,10 @@
                   <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Café 100% pur grain</h5>
-
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
-                      100%
-                      café</p>
+                    <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café 100% café</p>
                   </div>
-                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
-                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                  <div class="card-footer"><span>9,5 €</span><button data-name="English Breakfast" data-price="9.5" type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -78,13 +95,10 @@
                   <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Café 100% pur grain</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
-                      100%
-                      café</p>
+                    <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café 100% café</p>
                   </div>
-                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
-                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                  <div class="card-footer"><span>9,5 €</span><button data-name="English Chocolate" data-price="6.70" type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -94,13 +108,10 @@
                   <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Café 100% pur grain</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
-                      100%
-                      café</p>
+                    <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café 100% café</p>
                   </div>
-                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
-                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                  <div class="card-footer"><span>9,5 €</span><button data-name="English Breakfast" data-price="6.70" type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -110,14 +121,10 @@
                   <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Café 100% pur grain</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
-                      100%
-                      café</p>
-                    <p id="demo"></p>
+                    <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café 100% café</p>
                   </div>
-                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
-                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                  <div class="card-footer"><span>9,5 €</span><button data-name="English Breakfast" data-price="6.70" type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -127,18 +134,15 @@
                   <img src="./images/cafe1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">Café 100% pur grain</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café
-                      100%
-                      café</p>
-                    <p id="demo"></p>
+                    <p class="card-text">Ceci est un café, 100% caféine avec du café. Une expérience unique avec ce café 100% café</p>
                   </div>
-                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
-                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
+                  <div class="card-footer"><span>9,5 €</span><button data-name="English Breakfast" data-price="6.70" type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au panier</span></button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
           <button class="btn  leftLst fas fa-angle-left"></button>
           <button class="btn rightLst fas fa-angle-right"></button>
         </div>
@@ -146,161 +150,16 @@
     </div>
   </section>
 
-  <section id="the">
-    <div class="container">
-      <div class="row">
-        <div class="MultiCarousel" data-items="1,2,4,4" data-slide="1" id="MultiCarousel" data-interval="1000">
-          <div class="MultiCarousel-inner">
-            <div class="item col">
-              <div class="col">
-                <div class="card h-100">
-                  <img src="images/pomme-amande-cannelle-300x300.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title" id="item1">Thé Noir Pomme Amande Cannelle</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                  </div>
-                  <div class="card-footer"><span>5,30 € – 8,40 € TTC</span><button id="ajouter" value="item1"
-                      type="buttom" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                        class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
-                        panier</span></button></div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="col">
-                <div class="card h-100">
-                  <img src="images/english-breakfast-1-300x300.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title" id="item1">Thé Noir English Breakfast Broken</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                  </div>
-                  <div class="card-footer"><span>4,90 € – 6,70 € TTC</span><button id="ajouter" value="item2"
-                      type="button" class="btn shadow-none" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                        class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
-                        panier</span></button></div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="col">
-                <div class="card h-100">
-                  <img src="images/the-noir-pain-epices-1-300x300.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Thé De Noël Noir Saveur Pain D’épices</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                  </div>
-                  <div class="card-footer"><span>5,30 € – 8,80 € TTC</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
-                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="col">
-                <div class="card h-100">
-                  <img src="images/le-secret-des-mayas-600x600.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Thé Noir Saveur Cacao Chocolat</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                  </div>
-                  <div class="card-footer"><span>5,10 € – 8,40 € TTC</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
-                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="col">
-                <div class="card h-100">
-                  <img src="images/melange-du-costa-rica-600x600.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Thé Noir Saveur Mandarine</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                  </div>
-                  <div class="card-footer"><span>5,30 € – 8,40 € TTC</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
-                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="col">
-                <div class="card h-100">
-                  <img src="images/the-noir-bio-cour-de-recre-600x600.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Thé Noir Saveur Fraise Citron</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                  </div>
-                  <div class="card-footer"><span>5,70 € – 9,20 € TTC</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
-                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="col">
-                <div class="card h-100">
-                  <img src="images/the-noir-bio-cour-de-recre-600x600.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Thé Noir Saveur Fraise Citron</h5>
-                    <p class="card-text">Ceci est un café, 100% caféine avec du café.</p>
-                  </div>
-                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
-                        class="d-none d-md-inline"> Ajouter au panier</span></button></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button class="btn  leftLst fas fa-angle-left"></button>
-          <button class="btn rightLst fas fa-angle-right"></button>
-        </div>
-      </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-      aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p type="text" id="desc"></p>
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-          </div>
-        </div>
-      </div>
-    </div>
+  <section id="generatedThe">
   </section>
-
- 
-
-
-
 
   <script>
-    
     $(function () {
-
       $("#ajouter").click(function () {
         console.log("val du buttom" + $("#ajouter").val())
         $('#desc').text($("#" + $("#ajouter").val()).text());
-        
       })
-      
-      
-
-
     });
-
-
-
   </script>
 
   <!-- JavaScript Bundle with Popper -->
