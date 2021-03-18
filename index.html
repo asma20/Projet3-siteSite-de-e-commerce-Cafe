@@ -44,7 +44,7 @@
             </li>
           </ul>
           <form>
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+            <input class="form-control" id="myInput" type="text" placeholder="Search" aria-label="Search">
           </form>
         </div>
       </div>
@@ -66,7 +66,7 @@
                     <p class="card-text">Un Arabica fruité et acidulé au goût épicé. Il se caractérise par un bon corps, parfumé, aromatique et une bonne acidité.</p>
                   </div>
                   <div class="card-footer"><span>25,50 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="GUATEMALA HUEHUETENANGO" data-price="25.50"><i class="fas fa-shopping-bag"></i><span
+                      data-bs-toggle="modal" data-bs-target="#exampleModal"  onclick="addItem(this)" data-name="GUATEMALA HUEHUETENANGO" data-price="25.50"><i class="fas fa-shopping-bag"></i><span
                         class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
               </div>
@@ -79,7 +79,7 @@
                     <h5 class="card-title">Moka lavé de Yrgacheffe</h5>
                     <p class="card-text">Pure origine Moka en provenance d’Ethiopie de la région de Sidamo dans le sud du pays, ce café est cultivé en altitude à environ 2000m sous l'ombrage des forêts.</p>
                   </div>
-                  <div class="card-footer"><span>19,20 €</span><button type="button" data-name="Moka lavé de Yrgacheffe" data-price="19.20" class="btn shadow-none"
+                  <div class="card-footer"><span>19,20 €</span><button type="button" onclick="addItem(this)" data-name="Moka lavé de Yrgacheffe" data-price="19.20" class="btn shadow-none"
                       data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
                         class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
@@ -94,7 +94,7 @@
                     <p class="card-text">Ce café brésilien Sul de Minas au parfum envoûtant, offre une réelle onctuosité alliée à une faible acidité. Il est très apprécié des amateurs aimant un café doux</p>
                   </div>
                   <div class="card-footer"><span>16,45 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Brésil sul de minas" data-price="16.45"><i class="fas fa-shopping-bag"></i><span
+                      data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Brésil sul de minas" data-price="16.45"><i class="fas fa-shopping-bag"></i><span
                         class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
               </div>
@@ -108,7 +108,7 @@
                     <p class="card-text">Ce précieux micro-lot est un wush wush lavé qui offre des notes d'écorce de citron, physalis, sucre de canne et rhubarbe.</p>
                   </div>
                   <div class="card-footer"><span>23,50 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Colombie Finca Gutierrez Wush Wush" data-price="23.50"><i class="fas fa-shopping-bag"></i><span
+                      data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Colombie Finca Gutierrez Wush Wush" data-price="23.50"><i class="fas fa-shopping-bag"></i><span
                         class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
               </div>
@@ -122,7 +122,7 @@
                     <p class="card-text">Notre best-seller en version décaféinée pour que les amateurs de décaféiné aient aussi accès aux cafés de spécialités.</p>
                   </div>
                   <div class="card-footer"><span>18 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="YETI VILLAGE MOKA BIO Ethiopie" data-price="18"><i class="fas fa-shopping-bag"></i><span
+                      data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="YETI VILLAGE MOKA BIO Ethiopie" data-price="18"><i class="fas fa-shopping-bag"></i><span
                         class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
               </div>
@@ -280,7 +280,7 @@
             <p class="card-text">Un Arabica fruité et acidulé au goût épicé. Il se caractérise par un bon corps, parfumé, aromatique et une bonne acidité. Le climat, l’eau, la fertilité du sol et les variétés cultivées font que ce café est très demandé pour son arôme, son parfum, son corps et son goût</p>
           </div>
           <div class="card-footer"><span>25,50 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="GUATEMALA HUEHUETENANGO" data-price="25.50"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="GUATEMALA HUEHUETENANGO" data-price="25.50"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -291,7 +291,7 @@
             <h5 class="card-title">Moka lavé de Yrgacheffe</h5>
             <p class="card-text">Pure origine Moka en provenance d’Ethiopie de la région de Sidamo dans le sud du pays, ce café est cultivé en altitude à environ 2000m sous l'ombrage des forêts.</p>
           </div>
-          <div class="card-footer"><span>19,20 €</span><button type="button" data-name="Moka lavé de Yrgacheffe" data-price="19.20" class="btn shadow-none"
+          <div class="card-footer"><span>19,20 €</span><button type="button" onclick="addItem(this)" data-name="Moka lavé de Yrgacheffe" data-price="19.20" class="btn shadow-none"
               data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
@@ -304,7 +304,7 @@
             <p class="card-text">Pure origine provenant de la plantation Sigri située dans la Vallée Wahgi, Hautes-Terres Occidentales de Papouasie-Nouvelle Guinée. Cultivé à une altitude de 1500m, Ce café est issu d’une plantation emblématique de la biodiversité.</p>
           </div>
           <div class="card-footer"><span>12,30 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Papouasie Nouvelle Guinée Plantation Sigri" data-price="12.30"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Papouasie Nouvelle Guinée Plantation Sigri" data-price="12.30"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -316,7 +316,7 @@
             <p class="card-text">Le café en grains Black de Tonino Lamborghini vous transportera à travers l'Italie et son savoir-faire. Découvrez un café unique riche en arômes de cacao, pain grillé et épices, idéal pour un espresso ou un ristretto .</p>
           </div>
           <div class="card-footer"><span>15,39 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Tonino Lamborghini" data-price="15.39"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Tonino Lamborghini" data-price="15.39"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -330,7 +330,7 @@
             <p class="card-text">Pure origine Arabica provenant de la région de Malabar située sur la côte du sud-ouest de la péninsule indienne, sur la partie nord de l’état de Kérala, l’un des rares états indiens au climat tropical humide.</p>
           </div>
           <div class="card-footer"><span>14,50 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Café Malabar Moussoné AA" data-price="14.50"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Café Malabar Moussoné AA" data-price="14.50"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -342,7 +342,7 @@
             <p class="card-text">Pure origine provenant de la région de Nueva Segovia au Nicaragua , cultivée à une altitude de 1200m à 1500m) par l’entreprise familiale de Cafetalera Buenos Aires, dans les montagnes Dipilto.</p>
           </div>
           <div class="card-footer"><span>19,99 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Nicaragua Buenos Aires Estate Arabica" data-price="19.99"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Nicaragua Buenos Aires Estate Arabica" data-price="19.99"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -354,7 +354,7 @@
             <p class="card-text">Pure origine provenant de la région d'Atitlàn Solola au Guatemala, ce café est cultivé en altitude entre 1470m et 1720m et est traité par voie lavée.</p>
           </div>
           <div class="card-footer"><span>17,65 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Guatemala Finca Pampojila" data-price="17.65"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Guatemala Finca Pampojila" data-price="17.65"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -366,7 +366,7 @@
             <p class="card-text">Notre best-seller en version décaféinée pour que les amateurs de décaféiné aient aussi accès aux cafés de spécialités. La décaféination par CO2 est respecteueuse du goût et de l’environnement. </p>
           </div>
           <div class="card-footer"><span>18 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="YETI VILLAGE MOKA BIO Ethiopie" data-price="18"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="YETI VILLAGE MOKA BIO Ethiopie" data-price="18"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -380,7 +380,7 @@
             <p class="card-text">Ce café en grains Moka Shantawene est un café d'exception d'Éthiopie situé dans la zone de Sidama au Sud du pays. Ce 100% Arabica développe des notes exceptionnelles de pêche blanche, jasmin, bergamote, ananas. </p>
           </div>
           <div class="card-footer"><span>20 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Ethiopie Moka Shantawene" data-price="20"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Ethiopie Moka Shantawene" data-price="20"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -392,7 +392,7 @@
             <p class="card-text">Ce café en grains vient de la Ferme Gutierrez dans la région de Tolima à l'Ouest de la Colombie. Ce précieux micro-lot est un wush wush lavé qui offre des notes d'écorce de citron, physalis, sucre de canne et rhubarbe.</p>
           </div>
           <div class="card-footer"><span>23,50 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Colombie Finca Gutierrez Wush Wush" data-price="23.50"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Colombie Finca Gutierrez Wush Wush" data-price="23.50"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -404,7 +404,7 @@
             <p class="card-text">Ce café brésilien Sul de Minas au parfum envoûtant, offre une réelle onctuosité alliée à une faible acidité. Il est très apprécié des amateurs aimant un café doux</p>
           </div>
           <div class="card-footer"><span>16,45 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Brésil sul de minas" data-price="16.45"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Brésil sul de minas" data-price="16.45"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -416,7 +416,7 @@
             <p class="card-text">L'Himalaya Bourbon Pacas du Salvador a un profil très "Mild" Amérique centrale, avec un nez chaleureux, doux et fruité, un corps velouté, des notes de chocolat, de fruits jaunes, une finale longue, gourmande et sucrée.</p>
           </div>
           <div class="card-footer"><span>13,65 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="HIMALAYA BOURBON PACAS SALVADOR" data-price="13.65"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="HIMALAYA BOURBON PACAS SALVADOR" data-price="13.65"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -435,7 +435,7 @@
             <p class="card-text">Création originale et savoureuse associant un thé vert aux notes gourmandes d'amandes caramélisées et de pistache</p>
           </div>
           <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé merveilleux" data-price="9.5"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé merveilleux" data-price="9.5"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -447,7 +447,7 @@
             <p class="card-text">Un thé né de la rencontre entre des parfums fruités et épicés, tels que la douceur de la pomme et la sensualité du gingembre</p>
           </div>
           <div class="card-footer"><span>8,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé amants" data-price="8.5"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé amants" data-price="8.5"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -459,7 +459,7 @@
             <p class="card-text">Thé vert du Japon, Thé vert Bio et riz grillé de Shizuoka.</p>
           </div>
           <div class="card-footer"><span>13 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé Genmaicha midori" data-price="13" ><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé Genmaicha midori" data-price="13" ><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -473,7 +473,7 @@
             </p>
           </div>
           <div class="card-footer"><span>10 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé des trésors" data-price="10"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé des trésors" data-price="10"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -488,7 +488,7 @@
             </p>
           </div>
           <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé des trésors et ammande" data-price="9.5"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé des trésors et ammande" data-price="9.5"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -500,7 +500,7 @@
             <p class="card-text">Création exclusive aux parfums frais et fleuris évoquant la fleur de cerisier associée aux notes zestées d’agrumes.</p>
           </div>
           <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé guimet" data-price="9.5"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé guimet" data-price="9.5"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -512,7 +512,7 @@
             <p class="card-text">Une pointe de bergamote, quelques pétales de rose et de bleuets font de ce thé un véritable bouquet de saveurs, frais et désaltérant</p>
           </div>
           <div class="card-footer"><span>8,30 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé des sources" data-price="8.30"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé des sources" data-price="8.30"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -524,7 +524,7 @@
             <p class="card-text">Un délicieux mélange BIO de thé vert, maté, açai, guarana & fruit de la passion.</p>
           </div>
           <div class="card-footer"><span>9,50 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé brésilienne bio" data-price="9.50"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé brésilienne bio" data-price="9.50"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -538,7 +538,7 @@
             <p class="card-text">Entre influences indiennes et raffinement français, ce chaï se distingue par son mélange d’épices : cardamome, gingembre, baies roses</p>
           </div>
           <div class="card-footer"><span>8 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé imérial" data-price="8"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé imérial" data-price="8"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -550,7 +550,7 @@
             <p class="card-text">Remarquable thé noir dont les parfums zestés évoquent 7 agrumes</p>
           </div>
           <div class="card-footer"><span>9 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé russe gout 7 gout" data-price="9"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé russe gout 7 gout" data-price="9"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -562,7 +562,7 @@
             <p class="card-text">Inspiré d’une recette ancestrale élaborée dans un monastère tibétain, voici un mélange de thé noir et de thé vert à la saveur florale unique.</p>
           </div>
           <div class="card-footer"><span>9,20 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé des moines" data-price="9.20"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé des moines" data-price="9.20"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -574,7 +574,7 @@
             <p class="card-text">Corsé et riche en arômes, ce grand thé d'altitude aux feuilles très régulières est certainement le plus bel " Orange Pekoe " que l'on puisse trouver</p>
           </div>
           <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé noir du Sri Lanka" data-price="9.50"><i class="fas fa-shopping-bag"></i><span
+              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé noir du Sri Lanka" data-price="9.50"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -844,6 +844,13 @@
         $("#coffeeHide, #teaHide, #tisaneHide").hide()
         $("#cafe, #the").show()
       })
+
+    $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".card").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+});
     })
   </script>
 
