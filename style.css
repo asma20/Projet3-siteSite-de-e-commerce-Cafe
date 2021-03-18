@@ -2,7 +2,18 @@
     font-weight: 600;
     color: #3a2c21;
 }
+.total{
+    text-align: right;
+    padding: 0px 20px;
+}
 .btn{
+    border: 1px solid #3a2c21 ;
+    color: #3a2c21;
+    margin-left: 10px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0);
+}
+.btnvalider{
+    background-color: #dfd7d2;
     border: 1px solid #3a2c21 ;
     color: #3a2c21;
     margin-left: 10px;
@@ -12,6 +23,7 @@
     border: 1px solid #3a2c21;
     background-color: #50372b;
     color: #ffffff;
+
 }.btn:active{
     border: 1px solid #816652;
     background-color: #817252;
