@@ -1,6 +1,6 @@
 $(function () { 
 
-     let itemsMainDiv = ('.MultiCarousel');
+    let itemsMainDiv = ('.MultiCarousel');
     let itemsDiv = ('.MultiCarousel-inner');
     let itemWidth = "";
    
@@ -15,7 +15,6 @@ $(function () {
 
     ResCarouselSize();
    
- 
     $(window).resize(function () {
         ResCarouselSize();
         
@@ -104,6 +103,7 @@ $(function () {
         let slide = $(Parent).attr("data-slide");
         ResCarousel(ell, Parent, slide);
     }
+}); 
 //fonctions du panier
 let basketTotal = 0
 //ajouter un élément au panier : récupérer le nom du produit et son prix dans les attributs du bouton
@@ -117,6 +117,7 @@ function addItem(element) {
 
 function ClearAll() {
     localStorage.clear()
+    sessionStorage.clear()
     doShowAll()
 }
 
@@ -135,13 +136,13 @@ function doShowAll() {
     }
     //Bind the data to HTML table.
     $("#list").html(list)
+    total()
 }
 function SaveItem() {
     let name = $("#name").val()
     let data = $("#quantity").val()
     localStorage.setItem(name, data)
     doShowAll()
-    total()
 }
 function total(){
     if(localStorage.length > 0){
@@ -151,12 +152,15 @@ function total(){
             let val = parseFloat(localStorage.getItem(key))
             sum += val
             $("#basketTotalTarget").html(sum + " €uros")
-            localStorage.setItem("basketSum", sum)
+            sessionStorage.setItem("basketSum", sum)
         }
+    }
+    else if (localStorage.length == 0){
+        sessionStorage.setItem("basketSum",0)
+        $("#basketTotalTarget").html(0 + "€")
     }
 }
 function validate(){
     let sum = localStorage.getItem("basketSum")
     alert ("La commande a été passée pour un montant de " + sum + " euros. Merci pour votre achat !")
 }
-});

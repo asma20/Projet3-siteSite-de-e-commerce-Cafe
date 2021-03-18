@@ -20,7 +20,7 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark " aria-label="Eleventh navbar example">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Eleventh navbar example">
       <div class="container-fluid">
         <a class="navbar-brand" id="tenango" href="#">TENANGO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09"
@@ -77,7 +77,6 @@
         <h2>Notre sélection de cafés</h2>
         <div class="MultiCarousel" data-items="1,2,4,4" data-slide="1" id="MultiCarousel" data-interval="1000">
           <div class="MultiCarousel-inner">
-
             <div class="item">
               <div class="col">
                 <div class="card h-100">
@@ -87,8 +86,7 @@
                     <p class="card-text">Un Arabica fruité et acidulé au goût épicé. Il se caractérise par un bon corps,
                       parfumé, aromatique et une bonne acidité.</p>
                   </div>
-                  <div class="card-footer"><span>25,50 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+                  <div class="card-footer"><span>25,50 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
                       data-name="GUATEMALA HUEHUETENANGO" data-price="25.50"><i class="fas fa-shopping-bag"></i><span
                         class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
@@ -104,8 +102,7 @@
                       du pays, ce café est cultivé en altitude à environ 2000m sous l'ombrage des forêts.</p>
                   </div>
                   <div class="card-footer"><span>19,20 €</span><button type="button" onclick="addItem(this)"
-                      data-name="Moka lavé de Yrgacheffe" data-price="19.20" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
+                      data-name="Moka lavé de Yrgacheffe" data-price="19.20" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
                         class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
               </div>
@@ -119,8 +116,7 @@
                     <p class="card-text">Ce café brésilien Sul de Minas au parfum envoûtant, offre une réelle onctuosité
                       alliée à une faible acidité. Il est très apprécié des amateurs aimant un café doux</p>
                   </div>
-                  <div class="card-footer"><span>16,45 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+                  <div class="card-footer"><span>16,45 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
                       data-name="Brésil sul de minas" data-price="16.45"><i class="fas fa-shopping-bag"></i><span
                         class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
@@ -135,8 +131,7 @@
                     <p class="card-text">Ce précieux micro-lot est un wush wush lavé qui offre des notes d'écorce de
                       citron, physalis, sucre de canne et rhubarbe.</p>
                   </div>
-                  <div class="card-footer"><span>23,50 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+                  <div class="card-footer"><span>23,50 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
                       data-name="Colombie Finca Gutierrez Wush Wush" data-price="23.50"><i
                         class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
                         panier</span></button></div>
@@ -152,8 +147,7 @@
                     <p class="card-text">Notre best-seller en version décaféinée pour que les amateurs de décaféiné
                       aient aussi accès aux cafés de spécialités.</p>
                   </div>
-                  <div class="card-footer"><span>18 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+                  <div class="card-footer"><span>18 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
                       data-name="YETI VILLAGE MOKA BIO Ethiopie" data-price="18"><i
                         class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
                         panier</span></button></div>
@@ -182,8 +176,7 @@
                     <h5 class="card-title">Thé merveilleux</h5>
                     <p class="card-text">Création originale et savoureuse associant </p>
                   </div>
-                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé merveilleux" data-price=9.5
+                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-name="Thé merveilleux" data-price=9.5
                       onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline">
                         Ajouter au panier</span></button></div>
                 </div>
@@ -197,8 +190,7 @@
                     <h5 class="card-title">Thé amants</h5>
                     <p class="card-text">Un thé né de la rencontre entre des parfums fruités </p>
                   </div>
-                  <div class="card-footer"><span>8,5 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé amants" data-price=8.5
+                  <div class="card-footer"><span>8,5 €</span><button type="button" class="btn shadow-none" data-name="Thé amants" data-price=8.5
                       onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline">
                         Ajouter au panier</span></button></div>
                 </div>
@@ -212,8 +204,7 @@
                     <h5 class="card-title">Thé Genmaicha midori</h5>
                     <p class="card-text">Thé vert du Japon, Thé vert Bio et riz grillé de Shizuoka.</p>
                   </div>
-                  <div class="card-footer"><span>13 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé Genmaicha midori"
+                  <div class="card-footer"><span>13 €</span><button type="button" class="btn shadow-none" data-name="Thé Genmaicha midori"
                       data-price=13 onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span
                         class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
@@ -229,8 +220,7 @@
                       Thé vert, fruits caramélisés et éclats d’amande
                     </p>
                   </div>
-                  <div class="card-footer"><span>10 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé des trésors" data-price="10"
+                  <div class="card-footer"><span>10 €</span><button type="button" class="btn shadow-none" data-name="Thé des trésors" data-price="10"
                       onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline">
                         Ajouter au panier</span></button></div>
                 </div>
@@ -245,8 +235,7 @@
                     <p class="card-text">Thé vert, fruits caramélisés et éclats d’amande
                     </p>
                   </div>
-                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé des trésors et ammande"
+                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-name="Thé des trésors et ammande"
                       data-price="9.5" onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span
                         class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
@@ -260,8 +249,7 @@
                     <h5 class="card-title">Thé guimet</h5>
                     <p class="card-text">Création exclusive aux parfums frais et fleuris.</p>
                   </div>
-                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé guimet" data-price="9.5"
+                  <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" data-name="Thé guimet" data-price="9.5"
                       onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline">
                         Ajouter au panier</span></button></div>
                 </div>
@@ -275,8 +263,7 @@
                     <h5 class="card-title">Thé des sources</h5>
                     <p class="card-text">Une pointe de bergamote, quelques pétales de rose.</p>
                   </div>
-                  <div class="card-footer"><span>8,30 €</span><button type="button" class="btn shadow-none"
-                      data-bs-toggle="modal" data-bs-target="#exampleModal" data-name="Thé des sources"
+                  <div class="card-footer"><span>8,30 €</span><button type="button" class="btn shadow-none" data-name="Thé des sources"
                       data-price="8.30" onclick="addItem(this)"><i class="fas fa-shopping-bag"></i><span
                         class="d-none d-md-inline"> Ajouter au panier</span></button></div>
                 </div>
@@ -303,8 +290,7 @@
               parfumé, aromatique et une bonne acidité. Le climat, l’eau, la fertilité du sol et les variétés
               cultivées font que ce café est très demandé pour son arôme, son parfum, son corps et son goût</p>
           </div>
-          <div class="card-footer"><span>25,50 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>25,50 €</span><button type="button" class="btn shadow-none" id=""onclick="addItem(this)"
               data-name="GUATEMALA HUEHUETENANGO" data-price="25.50"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
@@ -332,8 +318,7 @@
               Hautes-Terres Occidentales de Papouasie-Nouvelle Guinée. Cultivé à une altitude de 1500m, Ce café
               est issu d’une plantation emblématique de la biodiversité.</p>
           </div>
-          <div class="card-footer"><span>12,30 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>12,30 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
               data-name="Papouasie Nouvelle Guinée Plantation Sigri" data-price="12.30"><i
                 class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
                 panier</span></button></div>
@@ -348,8 +333,7 @@
               l'Italie et son savoir-faire. Découvrez un café unique riche en arômes de cacao, pain grillé et
               épices, idéal pour un espresso ou un ristretto .</p>
           </div>
-          <div class="card-footer"><span>15,39 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>15,39 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
               data-name="Tonino Lamborghini" data-price="15.39"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
@@ -365,8 +349,7 @@
               sud-ouest de la péninsule indienne, sur la partie nord de l’état de Kérala, l’un des rares états
               indiens au climat tropical humide.</p>
           </div>
-          <div class="card-footer"><span>14,50 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>14,50 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
               data-name="Café Malabar Moussoné AA" data-price="14.50"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
@@ -380,8 +363,7 @@
               une altitude de 1200m à 1500m) par l’entreprise familiale de Cafetalera Buenos Aires, dans les
               montagnes Dipilto.</p>
           </div>
-          <div class="card-footer"><span>19,99 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>19,99 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
               data-name="Nicaragua Buenos Aires Estate Arabica" data-price="19.99"><i
                 class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
                 panier</span></button></div>
@@ -395,8 +377,7 @@
             <p class="card-text">Pure origine provenant de la région d'Atitlàn Solola au Guatemala, ce café est
               cultivé en altitude entre 1470m et 1720m et est traité par voie lavée.</p>
           </div>
-          <div class="card-footer"><span>17,65 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>17,65 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
               data-name="Guatemala Finca Pampojila" data-price="17.65"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
@@ -412,7 +393,7 @@
           </div>
           <div class="card-footer"><span>18 €</span><button type="button" class="btn shadow-none" data-bs-toggle="modal"
               data-bs-target="#exampleModal" onclick="addItem(this)" data-name="YETI VILLAGE MOKA BIO Ethiopie"
-              data-price="18"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
+              data-price="18.00"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
                 panier</span></button></div>
         </div>
       </div>
@@ -442,8 +423,7 @@
               de la Colombie. Ce précieux micro-lot est un wush wush lavé qui offre des notes d'écorce de citron,
               physalis, sucre de canne et rhubarbe.</p>
           </div>
-          <div class="card-footer"><span>23,50 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>23,50 €</span><button type="button" class="btn shadow-n onclick="addItem(this)"
               data-name="Colombie Finca Gutierrez Wush Wush" data-price="23.50"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au
                 panier</span></button></div>
@@ -457,8 +437,7 @@
             <p class="card-text">Ce café brésilien Sul de Minas au parfum envoûtant, offre une réelle onctuosité
               alliée à une faible acidité. Il est très apprécié des amateurs aimant un café doux</p>
           </div>
-          <div class="card-footer"><span>16,45 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>16,45 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
               data-name="Brésil sul de minas" data-price="16.45"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
@@ -472,8 +451,7 @@
               avec un nez chaleureux, doux et fruité, un corps velouté, des notes de chocolat, de fruits jaunes,
               une finale longue, gourmande et sucrée.</p>
           </div>
-          <div class="card-footer"><span>13,65 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>13,65 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
               data-name="HIMALAYA BOURBON PACAS SALVADOR" data-price="13.65"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au
                 panier</span></button></div>
@@ -494,8 +472,7 @@
             <p class="card-text">Création originale et savoureuse associant un thé vert aux notes gourmandes d'amandes
               caramélisées et de pistache</p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé merveilleux"
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)" data-name="Thé merveilleux"
               data-price="9.5"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
                 panier</span></button></div>
         </div>
@@ -508,8 +485,7 @@
             <p class="card-text">Un thé né de la rencontre entre des parfums fruités et épicés, tels que la douceur de
               la pomme et la sensualité du gingembre</p>
           </div>
-          <div class="card-footer"><span>8,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé amants"
+          <div class="card-footer"><span>8,5 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)" data-name="Thé amants"
               data-price="8.5"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
                 panier</span></button></div>
         </div>
@@ -552,8 +528,7 @@
             <p class="card-text">Thé vert, fruits caramélisés et éclats d’amande
             </p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
               data-name="Thé des trésors et ammande" data-price="9.5"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
@@ -566,8 +541,7 @@
             <p class="card-text">Création exclusive aux parfums frais et fleuris évoquant la fleur de cerisier associée
               aux notes zestées d’agrumes.</p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé guimet"
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)" data-name="Thé guimet"
               data-price="9.5"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
                 panier</span></button></div>
         </div>
@@ -580,8 +554,7 @@
             <p class="card-text">Une pointe de bergamote, quelques pétales de rose et de bleuets font de ce thé un
               véritable bouquet de saveurs, frais et désaltérant</p>
           </div>
-          <div class="card-footer"><span>8,30 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé des sources"
+          <div class="card-footer"><span>8,30 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)" data-name="Thé des sources"
               data-price="8.30"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
                 panier</span></button></div>
         </div>
@@ -593,8 +566,7 @@
             <h5 class="card-title"> Thé brésilienne bio</h5>
             <p class="card-text">Un délicieux mélange BIO de thé vert, maté, açai, guarana & fruit de la passion.</p>
           </div>
-          <div class="card-footer"><span>9,50 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>9,50 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
               data-name="Thé brésilienne bio" data-price="9.50"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
@@ -636,8 +608,7 @@
             <p class="card-text">Inspiré d’une recette ancestrale élaborée dans un monastère tibétain, voici un mélange
               de thé noir et de thé vert à la saveur florale unique.</p>
           </div>
-          <div class="card-footer"><span>9,20 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)" data-name="Thé des moines"
+          <div class="card-footer"><span>9,20 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)" data-name="Thé des moines"
               data-price="9.20"><i class="fas fa-shopping-bag"></i><span class="d-none d-md-inline"> Ajouter au
                 panier</span></button></div>
         </div>
@@ -650,8 +621,7 @@
             <p class="card-text">Corsé et riche en arômes, ce grand thé d'altitude aux feuilles très régulières est
               certainement le plus bel " Orange Pekoe " que l'on puisse trouver</p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="addItem(this)"
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none" onclick="addItem(this)"
               data-name="Thé noir du Sri Lanka" data-price="9.50"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
@@ -672,8 +642,7 @@
               100%
               café</p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -686,8 +655,7 @@
               100%
               café</p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -700,8 +668,7 @@
               100%
               café</p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -714,8 +681,7 @@
               100%
               café</p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -730,8 +696,7 @@
               100%
               café</p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -744,8 +709,7 @@
               100%
               café</p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -758,8 +722,7 @@
               100%
               café</p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
@@ -772,8 +735,7 @@
               100%
               café</p>
           </div>
-          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"
-              data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-shopping-bag"></i><span
+          <div class="card-footer"><span>9,5 €</span><button type="button" class="btn shadow-none"><i class="fas fa-shopping-bag"></i><span
                 class="d-none d-md-inline"> Ajouter au panier</span></button></div>
         </div>
       </div>
